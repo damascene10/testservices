@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.ac.testservices.model.Student;
-
+@Repository
 public interface StudentRepository  extends JpaRepository<Student,Long>{
 @Query("SELECT s from Student s WHERE s. email=?1")
 	Student findByEmail(String email);
